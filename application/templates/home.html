@@ -4,10 +4,10 @@
     <p>Welcome to this web app!</p>
     {% for post in posts %}
         <div>
-            <h3><b>First Name:</b> {{ post.first_name }}</h3>
-            <h3><b>Last Name:</b> {{ post.last_name }}</h3>
-            <h3><b>Title:</b> {{ post.title }}</h3>
-            <h3><b>Content:</b> {{ post.content }}</h3>
+            <h3>First Name:{{ post.first_name }}</h3>
+            <h3>Last Name:{{ post.last_name }}</h3>
+            <h3>Title:{{ post.title }}</h3>
+            <h3>Content:{{ post.content }}</h3>
         </div>
     {% endfor %}
 {% endblock body_content %}
