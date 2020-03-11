@@ -1,17 +1,13 @@
 {% extends "layout.html" %}
-
 {% block body_content %}
-
-<h1>{{ title }}</h1>
-
-{% for post in blogData %}
-    <div>
-        <h3>{{ post.title }}</h3>
-        <p><b> - First name:</b>{{ post.name.first }}</p>
-        <p><b> - Last name:</b>{{ post.name.last }}</p>
-        <p> -- {{ post.content }}</p>
-    </div>
-{% endfor %}
-
-
+    <h1>Home Page</h1>
+    <p>Welcome to this web app!</p>
+    {% for post in posts %}
+        <div>
+            <h3><b>First Name:</b> {{ post.first_name }}</h3>
+            <h3><b>Last Name:</b> {{ post.last_name }}</h3>
+            <h3><b>Title:</b> {{ post.title }}</h3>
+            <h3><b>Content:</b> {{ post.content }}</h3>
+        </div>
+    {% endfor %}
 {% endblock body_content %}
