@@ -35,14 +35,16 @@
         </div>
         <br>
         <br>
+        <div class='form_group'>
+            {{ form.remember.label }}
+            {{ form.remember }}
+        </div>
+        <div>
+            {{ form.submit }}
+        </div>
     </form>
-    <div class='form_group'>
-        {{ form.submit }}
-    </div>
 </div>
 
-    {{ form.remember.label }}
-    {{ form.remember }}
 
 {% endblock body_content %}
 
