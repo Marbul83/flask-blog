@@ -1,0 +1,13 @@
+[Unit]
+Description=Flask App
+[Service]
+User=pythonadm
+Working Directory= /opt/flask-blog
+ExecStart=/bin/bash \
+	-c 'cd /opt/flask-app && \
+	. ./venv/bin/activate && \
+	python ./app.py'
+Environment=SECRET_KEY={{SECRET_KEY}}
+Environment=DATABASE_URI=mysql+pymysql://{{MYSQL_USER}}:{{MYSQL_PASSWORD}}@{{MYSQL_HOST}}/{{MYSQL_DATABASE}}
+[Install]
+WantedBy=multi-user.target
